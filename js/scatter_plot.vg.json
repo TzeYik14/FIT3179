@@ -27,17 +27,7 @@
             {
                 "mark": "circle",
                 "encoding": {
-                    "size": {
-                        "field": "population",
-                        "title": "Population",
-                        "type": "quantitative",
-                        "scale": {
-                            "type": "threshold",
-                            "domain": [10000000,100000000,500000000,1000000000,5000000000],
-                            "range": [10,60,160,210,350,500]
-                        },
-                        "legend": {"format": ".1s"}
-                    },
+   
                     "color": {
                         "field": "continent",
                         "title": "Continent",

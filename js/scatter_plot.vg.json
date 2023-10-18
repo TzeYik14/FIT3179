@@ -43,7 +43,7 @@
             "field": "total_cases",
             "type" : "quantitative",
             "aggregate": "average",
-            "title": "Average Confirmed Cases",
+            "title": "Suicide rate",
             "axis": {"tickCount": 6, "grid": false,"gridOpacity":0},
             "scale": {"type": "log", "domain": [1,100000000]}
         },
@@ -51,7 +51,7 @@
             "field": "total_deaths",
             "type": "quantitative",
             "aggregate": "average",
-            "title": "Average of Deaths",
+            "title": "Depression rate",
             "axis": {"tickCount": 6, "grid": false,"gridOpacity":0},
             "scale": {"type": "log", "domain": [1,100000000]}
         }
@@ -93,7 +93,7 @@
                      "tooltip": [
                         {"field": "location", "type": "nominal", "title": "Country"},
                         {"field": "total_cases", "type": "quantitative","title": "Suicide rate","aggregate":"average", "format": ".0f"},
-                        {"field": "total_deaths", "type": "quantitative", "title": "Average Deaths","aggregate":"average","format": ".0f"}
+                        {"field": "total_deaths", "type": "quantitative", "title": "Depression rate","aggregate":"average","format": ".0f"}
                     ]
                 }
             },
@@ -119,7 +119,7 @@
                     "tooltip": [
                         {"field": "location", "type": "nominal", "title": "Country"},
                         {"field": "total_cases", "type": "quantitative","title": "Suicide rate","aggregate":"average", "format": ".0f"},
-                        {"field": "total_deaths", "type": "quantitative", "title": "Gini","aggregate":"average","format": ".0f"}
+                        {"field": "total_deaths", "type": "quantitative", "title": "Depression rate","aggregate":"average","format": ".0f"}
                 ]
             }
         }

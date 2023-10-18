@@ -5,39 +5,6 @@
     "data": {
         "url": "https://tzeyik14.github.io/FIT3179/data/suicide_rate_world_wide.csv"
     },
-    "params": [
-        {
-            "name": "Continent_selection",
-            "bind": {
-                "input": "select",
-                "options": [
-                    null,
-                    "North America",
-                    "South America",
-                    "Europe",
-                    "Africa",
-                    "Asia",
-                    "Oceania"
-                ],
-                "labels": [
-                    "Show All",
-                    "North America",
-                    "South America",
-                    "Europe",
-                    "Africa",
-                    "Asia",
-                    "Oceania"
-                ],
-                "name": "Continent Selection: "
-            }
-        }
-        
-    ],
-    "transform": [{"filter": "datum.total_cases > 0"}, 
-    {"filter": "datum.total_deaths > 0"},
-{
-    "filter": "Continent_selection == null || datum.continent == Continent_selection"}
-],
     "encoding": {
         "x" : {
             "field": "total_cases",

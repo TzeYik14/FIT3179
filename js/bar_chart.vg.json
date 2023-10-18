@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
     "height": 500,
-    "background": "lightgray",
+    
     "data": {
         "url": "https://tzeyik14.github.io/FIT3179/data/depression_by_age.csv"
     },

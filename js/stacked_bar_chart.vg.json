@@ -35,6 +35,7 @@
           "value" : 0.2
         },
         "tooltip" : [{"field": "gender", "type": "nominal", "title" : "Gender "},{"field" : "value", "type": "quantitative", "title" : "Suicide Rate ", "format": ".2f"}]
-    }
+    },
+    "config" : {"view" : {"stroke" : "transparent"}}
     
 }

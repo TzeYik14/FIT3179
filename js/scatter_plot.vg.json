@@ -2,9 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
     "height": 500,
-    "background": "lightgray",
-
-    
     "data": {
         "url": "https://tzeyik14.github.io/FIT3179/data/suicide_rate_world_wide.csv"
     },
@@ -45,7 +42,6 @@
         "x" : {
             "field": "total_cases",
             "type" : "quantitative",
-            
             "aggregate": "average",
             "title": "Average Confirmed Cases",
             "axis": {"tickCount": 6, "grid": false,"gridOpacity":0},
@@ -96,7 +92,7 @@
                      },
                      "tooltip": [
                         {"field": "location", "type": "nominal", "title": "Country"},
-                        {"field": "total_cases", "type": "quantitative","title": "Average Confirmed Cases","aggregate":"average", "format": ".0f"},
+                        {"field": "total_cases", "type": "quantitative","title": "Suicide rate","aggregate":"average", "format": ".0f"},
                         {"field": "total_deaths", "type": "quantitative", "title": "Average Deaths","aggregate":"average","format": ".0f"}
                     ]
                 }
@@ -122,8 +118,8 @@
                     },
                     "tooltip": [
                         {"field": "location", "type": "nominal", "title": "Country"},
-                        {"field": "total_cases", "type": "quantitative","title": "Average Confirmed Cases","aggregate":"average", "format": ".0f"},
-                        {"field": "total_deaths", "type": "quantitative", "title": "Average Deaths","aggregate":"average","format": ".0f"}
+                        {"field": "total_cases", "type": "quantitative","title": "Suicide rate","aggregate":"average", "format": ".0f"},
+                        {"field": "total_deaths", "type": "quantitative", "title": "Gini","aggregate":"average","format": ".0f"}
                 ]
             }
         }

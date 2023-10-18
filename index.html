@@ -98,26 +98,6 @@
         <br> <br>
         <br> <br>
 
-        <div class="pure-g" id="line_chart_bottom">
-            <div class="pure-u-1">
-                <h3>COVID-19 Monthly Average Deaths</h3>
-            </div>
-
-            
-
-            <div class="pure-u-1-2", id="line_chart_description">
-                <br><br>
-                <br><br>
-                <p id="spaces">Looking at the average monthly COVID-19 deaths per continent helps us see how the virus affects different parts of the world each month. </p>
-                <p id="spaces"><span class='bold_text'>Europe</span> has seen a consistent pattern of rapid increase and decrease in COVID-19 deaths over the months. </p>
-                <p id ="spaces">Throughout the months from January to December, it is evident that Oceania consistently maintained a relatively stable number of COVID-19-related deaths.
-            </div>
-
-            <div class="pure-u-1-2">
-               
-                <div id="stacked_bar_chart"></div>
-            </div>
-        </div>
 
 
 
@@ -143,10 +123,6 @@
 
             var spec5="js/bar_chart.vg.json";
             vegaEmbed('#bar_chart',spec5).then(function(result) {
-            }).catch(console.error);
-
-            var spec6="js/line_chart.vg.json";
-            vegaEmbed('#line_chart',spec6).then(function(result) {
             }).catch(console.error);
 
 

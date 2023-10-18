@@ -1,0 +1,21 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 500,
+  "data": {
+    "url" : "https://tzeyik14.github.io/FIT3179/data/depression.csv"
+  },
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative", "stack": true, "aggregate": "sum"},
+    "color": {"field": "gender", "type": "nominal", "scale" : {"range" : ["#33a02c", "#1f78b4"]}},
+    "tooltip" : [{"field" : "gender", "type":  "nominal", "title" : "Gender"}, {"field": "value", "type": "nominal", "title" : "Depressive disorders", "aggregate": "sum", "format": ".2f"}]
+  },
+  "layer": [{
+    "mark": {"type": "arc", "innerRadius": 80}
+  }, {
+    "mark": {"type": "text", "radius": 290},
+    "encoding": {
+      "text": {"field": "value", "type": "quantitative", "aggregate" : "sum", "format" : ".2f"}
+    }
+  }]
+}

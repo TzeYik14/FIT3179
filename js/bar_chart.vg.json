@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 500,
+    "background": "lightgray",
+    "data": {
+        "url": "https://tzeyik14.github.io/FIT3179/data/depression_by_age.csv"
+    },
+    "params": [{
+        "name": "continent_highlight",
+        "select": {"type": "point","fields": ["Age group"]},
+        "bind": "legend"
+    }],
+    "mark": {
+        "type": "bar"
+        },
+    "encoding": {
+        "x" : {
+            "field": "Age group",
+            "type": "nominal",
+            "title": "Age group",
+            "axis": {"grid": false},
+            "sort": ["Age: 5-14 years"]
+        },
+        "y": {
+            "field": "values",
+            "title": "Average total cases",
+            "type": "quantitative",
+            "aggregate":"average",
+            "axis": {"grid": false}
+        
+        },
+        "color": {
+            "field": "Age group",
+            "title": "Age group",
+            "type": "nominal",
+            "sort": ["Age: 5-14 years"]
+        },
+        "opacity": {
+            "condition": {"param":"continent_highlight","value": 1},"value":0.2
+        },
+        "tooltip": [{"field": "Age group","type": "nominal","title":"Age"},
+                    {"field": "values","type": "quantitative","title":"Depression rate","aggregate":"average","format":".1f"}]
+    }
+}

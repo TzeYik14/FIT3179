@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 500,
+    "data": {
+        "url": "https://tzeyik14.github.io/FIT3179/data/death_by_sex_cleaned.csv"
+    },
+    "params": [
+        {
+            "name" : "gender_highlight",
+            "select" : {"type": "point", "fields": ["gender"]}
+        }
+    ],
+    "mark": {
+        "type": "bar"
+    },
+    "encoding": {
+        "x": {
+            "timeUnit": "year",
+            "field": "Year",
+            "title": "Year",
+            "type": "ordinal"
+        },
+        "y": {
+            "aggregate": "sum",
+            "field": "value",
+            "axis" : {"title": "Suicide rate", "grid" : false},
+            "type": "quantitative"
+            
+        },
+        
+        "color" : {"field" : "gender", "title" : "Gender", "type": "nominal", "scale" : {"range" : ["#33a02c", "#1f78b4"]}},
+        "opacity" : {
+          "condition" : {"param": "gender_highlight", "value" : 1},
+          "value" : 0.2
+        },
+        "tooltip" : [{"field": "gender", "type": "nominal", "title" : "Gender "},{"field" : "value", "type": "quantitative", "title" : "Suicide Rate ", "format": ".2f"}]
+    }
+    
+}

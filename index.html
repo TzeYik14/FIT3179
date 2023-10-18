@@ -6,15 +6,24 @@
         <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+        
+
+
 
     </head>
 
     <body>
-        <h1>Depression Dashboard</h1>
+
+       
+        <h1><span class='bold_text'>COVID-19</span> <span class='no_bold'>Pandemic Global Insight</span> <span class='bold_text'> 2020</span> </h1>
         <div class="pure-g">
             <div class="pure-u-1">
-                <h3>World COVID 19 Cases 2021 (per 10,000 population)</h3>
+                <h3>COVID-19 Worldwide Cases in 2020</h3>
                 <div id="choropleth_map"></div>
             </div>
         </div>
@@ -23,17 +32,21 @@
         
 
         <div class="pure-g">
+            <div class="pure-u-1">
+            <h3>COVID-19 Deaths vs.Cases: Population-Scaled Analysis</h3>
+            </div>
             <div class="pure-u-1-2">
-                <h3>COVID-19 Cases per Country (2020)</h3>
+                
                 <div id="scatter_plot"></div>
             </div>
 
-            <div class="pure-u-1-2">
-                <br><br>
-                <br><br>
-                <p> The scatter plot presented illustrates the correlation between COVID-19-related deaths and total cases per population for various continents. The graph unmistakably indicates that as the average confirmed cases rise, so do the death cases. </p>
-                <br> <br>
-                <p>Areas with <span class='bold_text'> higher population </span> densities often have a higher risk of transmission due to <span class='bold_text'> increased human interaction </span> The close proximity of individuals in densely populated areas can facilitate the spread of the virus. </p>
+            <div class="pure-u-1-2" id="scatter_plot_description"><
+
+                <p id="spaces">It offers a clearer understanding of how impactful the virus has been in different regions, adjusting for population variations.</p>
+            
+                <p id="spaces">The correlation between COVID-19-related deaths and total cases per population for various continents. The graph unmistakably indicates that as the average confirmed cases rise, so do the death cases. </p>
+                
+                <p id="spaces"> Areas with <span class='bold_text'> higher population </span> densities often have a higher risk of transmission due to <span class='bold_text'> increased human interaction </span> The close proximity of individuals in densely populated areas can facilitate the spread of the virus. </p>
             </div>
         </div>
 
@@ -41,20 +54,22 @@
         <br> <br>
 
         <div class="pure-g">
+            <div class="pure-u-1">
+                <h3>COVID-19 Cases by Continent</h3>
+            </div>
 
             <div class="pure-u-1-2">
                 <br><br>
                 <br><br>
-                <p>On average, <span class='bold_text'> North America </span> experiences the <span class='bold_red_text'> highest </span> number of COVID-19 cases.</p>
-                <p>This could be attributed to various factors, including the high population density in specific areas of North America, which facilitates the rapid spread of the virus. Furthermore, North America's extensive domestic and international travel connections make it easier for the virus to spread from one region to another.</p>
+                <p id="spaces">On average, <span class='bold_text'> North America </span> experiences the <span class='bold_text'> highest </span> number of COVID-19 cases.</p>
+                <p id="spaces">This could be attributed to various factors, including the high population density in specific areas of North America, which facilitates the rapid spread of the virus. Furthermore, North America's extensive domestic and international travel connections make it easier for the virus to spread from one region to another.</p>
                 <br> <br>
-                <p>Conversely, <span class='bold_text'> Oceania </span> has the <span class='bold_green_text'> lowest </span> reported number of COVID-19 cases.</p>
-                <p>This could be attributed to Oceania's geographic isolation from major COVID-19 epicenters and its comparatively low population density. Additionally, Oceania promptly enforced strict border controls, quarantine measures, and travel restrictions at the onset of the pandemic.</p>
+                <p id="spaces">Conversely, <span class='bold_text'> Oceania </span> has the <span class='bold_text'> lowest </span> reported number of COVID-19 cases.</p>
+                <p id="spaces">This could be attributed to Oceania's geographic isolation from major COVID-19 epicenters and its comparatively low population density. Additionally, Oceania promptly enforced strict border controls, quarantine measures, and travel restrictions at the onset of the pandemic.</p>
 
             </div>
 
             <div class="pure-u-1-2">
-                <h3>Covid 19 Cases (By Continent)</h3>
                 <div id="pie_chart"></div>
             </div>
         </div>
@@ -63,19 +78,53 @@
         <br> <br>
 
         <div class="pure-g">
+            <div class="pure-u-1">
+                <h3>COVID-19 Average Cases by Continent</h3>
+            </div>
 
             <div class="pure-u-1-2">
-                <h3>ICU Patients due to Covid 19 (2020)</h3>
+                <div id="bar_chart"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <br><br> 
+            <p id="spaces">By calculating the average number of cases over a specified period, we can understand the relative impact of the pandemic on different continents.</p>
+            <br> 
+            <p id="spaces">The <span class='bold_text'>high</span> average COVID-19 cases in <span class='bold_text'>South America</span> can be attributed to a combination of demographic, healthcare, socioeconomic, and behavioral factors. The continent's densely populated urban centers, where people often live in close quarters, have facilitated the rapid spread of the virus.  </p>
+
+            <p id="spaces"><span class='bold_text'>Oceania</span>, encompassing various Pacific countries and territories, has consistently maintained a <span class='bold_text'>lower</span> average of COVID-19 cases compared to many other regions. This can be attributed to a combination of geographical isolation, stringent border controls, early implementation of precautionary measures, effective public health responses, relatively low population density, and lessons learned from past outbreaks.</p>
+    
+            </div>
+        </div>
+
+        <br> <br>
+        <br> <br>
+
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h3>COVID-19 Average Cases by Continent</h3>
+            </div>
+
+            <div class="pure-u-1-2">
                 <div id="stacked_bar_chart"></div>
             </div>
 
             <div class="pure-u-1-2">
-                <br><br>
-                <br><br>
-                <p> Various continents experienced varying numbers of ICU patients during the COVID-19 pandemic. <br> <br>In brief, <span class="bold_text"> North America </span> witnessed the <span class="bold_red_text"> highest </span> number of ICU patients due to COVID-19, whereas <span class="bold_text"> Oceania </span> had the <span class="bold_green_text"> lowest </span>. </p>
+                <br><br> 
+            <p id="spaces">By calculating the average number of cases over a specified period, we can understand the relative impact of the pandemic on different continents.</p>
+            <br> 
+            <p id="spaces">The <span class='bold_text'>high</span> average COVID-19 cases in <span class='bold_text'>South America</span> can be attributed to a combination of demographic, healthcare, socioeconomic, and behavioral factors. The continent's densely populated urban centers, where people often live in close quarters, have facilitated the rapid spread of the virus.  </p>
+
+            <p id="spaces"><span class='bold_text'>Oceania</span>, encompassing various Pacific countries and territories, has consistently maintained a <span class='bold_text'>lower</span> average of COVID-19 cases compared to many other regions. This can be attributed to a combination of geographical isolation, stringent border controls, early implementation of precautionary measures, effective public health responses, relatively low population density, and lessons learned from past outbreaks.</p>
     
             </div>
         </div>
+
+
+
+
+
+       
 
         <script type="text/javascript">
 
@@ -94,6 +143,11 @@
             var spec4="js/stacked_bar_chart.vg.json";
             vegaEmbed('#stacked_bar_chart',spec4).then(function(result) {
             }).catch(console.error);
+
+            var spec5="js/bar_chart.vg.json";
+            vegaEmbed('#bar_chart',spec5).then(function(result) {
+            }).catch(console.error);
+
 
         </script>
 
